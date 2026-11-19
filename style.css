@@ -1,0 +1,513 @@
+/* PENGATURAN DASAR */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fffaf3;
+    color: #49301f;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.section {
+    padding: 75px 0;
+}
+
+/* NAVBAR */
+.navbar {
+    background: #ffffff;
+    padding: 12px 0;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #713b18;
+    font-weight: bold;
+    font-size: 19px;
+}
+
+.brand img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 28px;
+}
+
+.nav-menu a {
+    color: #49301f;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+    position: relative;
+}
+
+.nav-menu a:hover {
+    color: #c27b35;
+}
+
+.nav-menu a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background: #bd7838;
+    transition: width 0.3s ease;
+}
+
+.nav-menu a:hover::after {
+    width: 100%;
+}
+
+.menu-toggle {
+    display: none;
+    border: none;
+    background: none;
+    font-size: 27px;
+    cursor: pointer;
+    color: #713b18;
+}
+
+/* HERO */
+.hero {
+    padding: 75px 0;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 45px;
+}
+
+.subtitle {
+    color: #bd7838;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.hero-text h1 {
+    font-size: clamp(32px, 5vw, 48px);
+    line-height: 1.2;
+    margin-bottom: 18px;
+}
+
+.hero-text h1 span {
+    color: #bd7838;
+}
+
+.hero-text p {
+    margin-bottom: 25px;
+    color: #766251;
+}
+
+/* LOGO HERO LINGKARAN */
+.hero-image {
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid #bd7838;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.4s ease;
+}
+
+.hero-image img:hover {
+    transform: scale(1.04);
+}
+
+/* TOMBOL */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #713b18;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #a45e2b;
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    transform: scale(0.97);
+}
+
+/* JUDUL SECTION */
+.section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-heading h2,
+.tentang-text h2,
+.kontak h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.section-heading > p:last-child {
+    color: #766251;
+}
+
+/* PRODUK */
+.produk {
+    background: #f8efe3;
+}
+
+.produk-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+    max-width: 850px;
+    margin: auto;
+}
+
+.produk-card {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.produk-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+.produk-image {
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+    padding: 12px;
+}
+
+.produk-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 14px;
+    transition: transform 0.4s ease;
+}
+
+.produk-card:hover .produk-image img {
+    transform: scale(1.05);
+}
+
+.produk-info {
+    padding: 20px;
+}
+
+.produk-info h3 {
+    font-size: 21px;
+    margin-bottom: 8px;
+}
+
+.produk-info p {
+    color: #766251;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.produk-info h4 {
+    color: #a45e2b;
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+
+.pesan-btn {
+    width: 100%;
+    text-align: center;
+}
+
+/* GALERI */
+.galeri {
+    background: #fffaf3;
+}
+
+.galeri-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    max-width: 950px;
+    margin: auto;
+}
+
+.galeri-card {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.galeri-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+.galeri-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.galeri-card:hover img {
+    transform: scale(1.05);
+}
+
+.galeri-card h3 {
+    padding: 15px;
+    color: #713b18;
+    font-size: 18px;
+}
+
+/* TENTANG KAMI */
+.tentang-content {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    align-items: center;
+    gap: 50px;
+}
+
+.tentang-image {
+    display: flex;
+    justify-content: center;
+}
+
+.tentang-image img {
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.tentang-image img:hover {
+    transform: scale(1.05);
+}
+
+.tentang-text p:not(.subtitle) {
+    color: #766251;
+    margin-bottom: 12px;
+}
+
+/* KONTAK */
+.kontak {
+    background: #f8efe3;
+    text-align: center;
+}
+
+.kontak-content {
+    max-width: 650px;
+}
+
+.kontak-content > p:not(.subtitle) {
+    color: #766251;
+    margin-bottom: 22px;
+}
+
+.kontak-button {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* FOOTER */
+.footer {
+    background: #713b18;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
+}
+
+/* FOKUS NAVIGASI */
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid #bd7838;
+    outline-offset: 4px;
+}
+
+/* ANIMASI */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* MENGURANGI ANIMASI JIKA DIPERLUKAN */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
+
+/* RESPONSIVE TABLET DAN HP */
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        padding: 20px 5%;
+        gap: 18px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.08);
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .hero {
+        padding: 45px 0;
+    }
+
+    .hero-image {
+        height: 280px;
+    }
+
+    .hero-image img {
+        width: 220px;
+        height: 220px;
+    }
+
+    .produk-list {
+        grid-template-columns: 1fr;
+        max-width: 430px;
+    }
+
+    .galeri-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .tentang-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .tentang-image img {
+        width: 190px;
+        height: 190px;
+    }
+
+    .section {
+        padding: 55px 0;
+    }
+}
+
+/* RESPONSIVE HP KECIL */
+@media (max-width: 400px) {
+
+    .brand {
+        font-size: 16px;
+    }
+
+    .brand img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .hero-image {
+        height: 220px;
+    }
+
+    .hero-image img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .produk-image {
+        height: 200px;
+    }
+
+    .galeri-list {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading h2,
+    .tentang-text h2,
+    .kontak h2 {
+        font-size: 27px;
+    }
+}
+
